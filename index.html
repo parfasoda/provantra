@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#07080a">
-    <title>PROVANTRA — B2B Sourcing & Logistics Almaty</title>
+    <title>PROVANTRA B2B — Sourcing & Supply | Комплексные B2B-поставки из Китая в Казахстан</title>
+    <meta name="description" content="PROVANTRA B2B Sourcing &amp; Supply: поиск производителей, закупка, брендирование, контроль качества и доставка корпоративной продукции из Китая в Казахстан.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -256,9 +257,9 @@
 
             <!-- DESKTOP NAVIGATION LINKS -->
             <nav class="hidden xl:flex items-center space-x-8 text-xs font-bold tracking-wider uppercase text-zinc-300">
-                <a href="#route" class="hover:text-gold-500 transition-colors" data-i18n="nav_route">Маршрут Китай-Алматы</a>
                 <a href="#services-tabs" class="hover:text-gold-500 transition-colors" data-i18n="nav_services">Услуги</a>
                 <a href="#advantages" class="hover:text-gold-500 transition-colors" data-i18n="nav_advantages">Преимущества</a>
+                <a href="#route" class="hover:text-gold-500 transition-colors" data-i18n="nav_route">Доставка</a>
                 <a href="#contacts" class="hover:text-gold-500 transition-colors" data-i18n="nav_contacts">Контакты</a>
             </nav>
 
@@ -284,9 +285,9 @@
 
         <!-- MOBILE MENU OVERLAY -->
         <div id="mobile-menu" class="hidden xl:hidden border-b border-white/10 bg-dark-900/95 backdrop-blur-xl px-4 sm:px-6 pt-2 pb-6 space-y-1 max-h-[calc(100dvh-4rem)] overflow-y-auto text-xs font-bold uppercase tracking-wider">
-            <a href="#route" class="mobile-link block py-3 text-sm border-b border-white/5 text-zinc-300 hover:text-gold-500" data-i18n="nav_route">Маршрут Китай-Алматы</a>
             <a href="#services-tabs" class="mobile-link block py-3 text-sm border-b border-white/5 text-zinc-300 hover:text-gold-500" data-i18n="nav_services">Услуги</a>
             <a href="#advantages" class="mobile-link block py-3 text-sm border-b border-white/5 text-zinc-300 hover:text-gold-500" data-i18n="nav_advantages">Преимущества</a>
+            <a href="#route" class="mobile-link block py-3 text-sm border-b border-white/5 text-zinc-300 hover:text-gold-500" data-i18n="nav_route">Доставка</a>
             <a href="#contacts" class="mobile-link block py-3 text-sm border-b border-white/5 text-zinc-300 hover:text-gold-500" data-i18n="nav_contacts">Контакты</a>
             <button onclick="openRfqModal()" class="w-full mt-4 py-3.5 text-xs font-extrabold tracking-wider uppercase text-black gold-gradient-bg rounded-lg shadow-md" data-i18n="btn_rfq">
                 Запросить КП
@@ -300,100 +301,93 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
+
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left reveal-element">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl sm:rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-[11px] sm:text-xs font-semibold tracking-wide sm:tracking-wider uppercase text-left">
-                        <i data-lucide="map-pin" class="w-3.5 h-3.5 flex-shrink-0"></i>
-                        <span data-i18n="hero_badge">B2B Поставки под ключ в Алматы</span>
+                        <i data-lucide="package-search" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                        <span data-i18n="hero_badge">Sourcing & Supply</span>
                     </div>
-                    
+
                     <h1 class="text-[1.65rem] min-[400px]:text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.2] sm:leading-[1.15] tracking-tight">
-                        <span data-i18n="hero_title_1">Прямые поставки оборудования и товаров из Китая</span>
-                        <span class="gold-gradient-text block mt-2" data-i18n="hero_title_2">прямо на ваш склад в Алматы</span>
+                        <span data-i18n="hero_title_1">Комплексные B2B-поставки из Китая</span>
+                        <span class="gold-gradient-text block mt-2" data-i18n="hero_title_2">для вашего бизнеса</span>
                     </h1>
-                    
-                    <p class="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed" data-i18n="hero_desc">
-                        PROVANTRA B2B берет на себя весь комплекс задач: инспекция заводов в Китае, контрактование, таможенное оформление (растаможка) и доставка до дверей любого бизнеса в Алматы.
-                    </p>
+
+                    <div class="space-y-3 max-w-2xl mx-auto lg:mx-0">
+                        <p class="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed" data-i18n="hero_desc">Находим производителей, организуем закупку, брендирование, контроль качества и доставку корпоративной продукции в Казахстан.</p>
+                        <p class="text-sm sm:text-base text-zinc-300 font-medium leading-relaxed" data-i18n="hero_desc2">От поиска подходящего товара до получения готовой партии — сопровождаем каждый этап поставки.</p>
+                    </div>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                         <button onclick="openRfqModal()" class="w-full sm:w-auto px-5 sm:px-8 py-4 text-center text-xs font-extrabold tracking-wider uppercase text-black gold-gradient-bg rounded-xl hover:shadow-[0_0_30px_rgba(207,167,110,0.4)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3">
-                            <span data-i18n="hero_cta">Рассчитать стоимость доставки в Алматы</span>
+                            <span data-i18n="hero_cta">Запросить расчёт</span>
                             <i data-lucide="arrow-right" class="w-4 h-4 flex-shrink-0"></i>
                         </button>
-                        <a href="#route" class="w-full sm:w-auto px-5 sm:px-8 py-4 text-xs font-bold tracking-wider uppercase text-zinc-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="truck" class="w-4 h-4 text-gold-500"></i>
-                            <span data-i18n="hero_route_btn">Смотреть маршрут</span>
+                        <a href="#services-tabs" class="w-full sm:w-auto px-5 sm:px-8 py-4 text-xs font-bold tracking-wider uppercase text-zinc-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="layout-grid" class="w-4 h-4 text-gold-500"></i>
+                            <span data-i18n="hero_route_btn">Наши услуги</span>
                         </a>
                     </div>
 
-                    <!-- TRUST METRICS -->
+                    <!-- KEY FACTS -->
                     <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-white/10">
                         <div>
-                            <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
-                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_1">Гарантия очистки</div>
+                            <div class="text-2xl sm:text-3xl font-black text-white" data-i18n="stat_1_v">5</div>
+                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_1">направлений услуг</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-black text-gold-400">12-18</div>
-                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_2">Дней экспресс-доставка</div>
+                            <div class="text-2xl sm:text-3xl font-black text-gold-400" data-i18n="stat_2_v">B2B</div>
+                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_2">корпоративные заказы</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-black text-white">Алматы</div>
-                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_3">Локальный офис и склад</div>
+                            <div class="text-lg sm:text-xl font-black text-white leading-tight pt-1.5 sm:pt-2" data-i18n="stat_3_v">Китай → KZ</div>
+                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_3">поставки под задачу</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-black text-gold-400">0%</div>
-                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_4">Риск брака (QC)</div>
+                            <div class="text-lg sm:text-xl font-black text-gold-400 leading-tight pt-1.5 sm:pt-2" data-i18n="stat_4_v">Алматы +</div>
+                            <div class="text-xs text-zinc-400 mt-1" data-i18n="stat_4">регионы Казахстана</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- HERO INTERACTIVE ALMATY LOGISTICS STATUS CARD -->
+                <!-- HERO PROCESS CARD -->
                 <div class="lg:col-span-5 reveal-element">
                     <div class="glass-card rounded-2xl p-5 sm:p-8 relative border border-gold-500/30 gold-glow">
                         <div class="flex flex-wrap items-center justify-between gap-2 pb-5 sm:pb-6 border-b border-white/10">
                             <div class="flex items-center gap-3">
-                                <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-                                <span class="text-xs font-bold uppercase tracking-wider text-zinc-200">PROVANTRA Almaty Transit</span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-zinc-200" data-i18n="card_title">Единый процесс поставки</span>
                             </div>
-                            <span class="text-[10px] px-2.5 py-1 rounded bg-gold-500/20 text-gold-400 font-mono font-bold">LIVE TRACKING</span>
+                            <span class="text-[10px] px-2.5 py-1 rounded bg-gold-500/20 text-gold-400 font-mono font-bold" data-i18n="card_badge">B2B PROCESS</span>
                         </div>
 
                         <div class="space-y-5 my-6">
                             <div class="flex items-start gap-4 p-3.5 rounded-xl bg-dark-900/80 border border-white/5">
-                                <div class="p-2 rounded-lg bg-gold-500/10 text-gold-400 mt-0.5">
-                                    <i data-lucide="factory" class="w-5 h-5"></i>
-                                </div>
+                                <div class="p-2 rounded-lg bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="search" class="w-5 h-5"></i></div>
                                 <div class="text-xs">
-                                    <div class="font-bold text-white uppercase tracking-wider" data-i18n="live_step1_title">Гуанчжоу / Иу (Китай)</div>
-                                    <div class="text-zinc-400 mt-1" data-i18n="live_step1_desc">Инспекция, консолидация и погрузка на авто/ж/д</div>
+                                    <div class="font-bold text-white uppercase tracking-wider" data-i18n="card1_t">Поиск и закупка</div>
+                                    <div class="text-zinc-400 mt-1" data-i18n="card1_d">Производители, предложения, условия сотрудничества</div>
                                 </div>
                             </div>
-
                             <div class="flex items-start gap-4 p-3.5 rounded-xl bg-dark-900/80 border border-gold-500/30">
-                                <div class="p-2 rounded-lg bg-gold-500 text-black mt-0.5">
-                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
-                                </div>
+                                <div class="p-2 rounded-lg bg-gold-500 text-black mt-0.5"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
                                 <div class="text-xs">
-                                    <div class="font-bold text-gold-400 uppercase tracking-wider" data-i18n="live_step2_title">КПП Хоргос (Таможня РК)</div>
-                                    <div class="text-zinc-300 mt-1" data-i18n="live_step2_desc">Таможенное декларирование и получение СТ-1 / ДС</div>
+                                    <div class="font-bold text-gold-400 uppercase tracking-wider" data-i18n="card2_t">Брендирование и контроль качества</div>
+                                    <div class="text-zinc-300 mt-1" data-i18n="card2_d">Логотип заказчика, проверка образцов и готовой продукции</div>
                                 </div>
                             </div>
-
                             <div class="flex items-start gap-4 p-3.5 rounded-xl bg-dark-900/80 border border-white/5">
-                                <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 mt-0.5">
-                                    <i data-lucide="warehouse" class="w-5 h-5"></i>
-                                </div>
+                                <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 mt-0.5"><i data-lucide="truck" class="w-5 h-5"></i></div>
                                 <div class="text-xs">
-                                    <div class="font-bold text-emerald-400 uppercase tracking-wider" data-i18n="live_step3_title">Склад Алматы (Доставка)</div>
-                                    <div class="text-zinc-400 mt-1" data-i18n="live_step3_desc">Разгрузка, финальный осмотр и передача документов</div>
+                                    <div class="font-bold text-emerald-400 uppercase tracking-wider" data-i18n="card3_t">Логистика и доставка</div>
+                                    <div class="text-zinc-400 mt-1" data-i18n="card3_d">Организация перевозки и сопровождение таможенного оформления</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs text-zinc-400 font-medium">
-                            <span>Прямой ВЭД Договор</span>
-                            <span class="text-gold-400 font-mono">Оплата в KZT / CNY</span>
+                            <span data-i18n="card_f1">Индивидуальный подбор</span>
+                            <span class="text-gold-400 font-mono" data-i18n="card_f2">Алматы и регионы РК</span>
                         </div>
                     </div>
                 </div>
@@ -402,361 +396,236 @@
         </div>
     </section>
 
-    <!-- ANIMATED CHINA -> KHORGOS -> ALMATY ROUTE FEATURE SECTION -->
-    <section id="route" class="py-16 sm:py-24 bg-dark-900 border-y border-white/10 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
-                <span class="text-[11px] sm:text-xs font-extrabold tracking-[0.15em] sm:tracking-[0.25em] text-gold-500 uppercase" data-i18n="route_subtitle">Прозрачная логистическая артерия</span>
-                <h2 class="text-2xl sm:text-4xl font-black text-white mt-2" data-i18n="route_title">Маршрут доставки: Китай &rarr; Хоргос &rarr; Алматы</h2>
-                <p class="text-zinc-400 text-xs sm:text-sm mt-3" data-i18n="route_desc">Прямой авто- и ж/д коридор с минимальным временем прохождения таможенных процедур на границе РК.</p>
-            </div>
-
-            <!-- SVG Route Map Canvas Container -->
-            <div class="glass-card rounded-2xl sm:rounded-3xl p-3 sm:p-6 lg:p-10 border border-gold-500/20 relative reveal-element">
-
-                <!-- ===== ПК (от 1024px): горизонтальная карта ===== -->
-                <div class="hidden lg:block relative w-full aspect-[9/4] bg-dark-950/90 rounded-2xl overflow-hidden border border-white/5">
-
-                    <!-- Grid pattern background -->
-                    <div class="absolute inset-0 bg-[radial-gradient(#cfa76e_1px,transparent_1px)] [background-size:24px_24px] opacity-15"></div>
-
-                    <svg viewBox="0 0 900 400" class="w-full h-full absolute inset-0 text-gold-500" role="img" aria-label="Маршрут: Китай, КПП Хоргос, Алматы">
-                        <defs>
-                            <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#dfba82" />
-                                <stop offset="50%" stop-color="#cfa76e" />
-                                <stop offset="100%" stop-color="#10b981" />
-                            </linearGradient>
-                        </defs>
-
-                        <!-- Main Static Line -->
-                        <path d="M 150 280 Q 400 120 750 180" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6" stroke-linecap="round"/>
-
-                        <!-- Animated Dotted Delivery Line -->
-                        <path d="M 150 280 Q 400 120 750 180" fill="none" stroke="url(#routeGradient)" stroke-width="5" class="animated-route-line" stroke-linecap="round"/>
-
-                        <!-- Point 1: China (Guangzhou / Yiwu) -->
-                        <g transform="translate(150, 280)">
-                            <circle r="14" fill="#14161b" stroke="#dfba82" stroke-width="4" />
-                            <circle r="5" fill="#dfba82" />
-                        </g>
-
-                        <!-- Point 2: Khorgos Border (Customs) — точка лежит ровно на кривой: t = 0.5414 -> (450; 171.24) -->
-                        <g transform="translate(450, 171.24)">
-                            <circle r="14" fill="#14161b" stroke="#cfa76e" stroke-width="4" />
-                            <circle r="5" fill="#cfa76e" />
-                        </g>
-
-                        <!-- Point 3: Almaty Destination -->
-                        <g transform="translate(750, 180)">
-                            <circle r="18" fill="#14161b" stroke="#10b981" stroke-width="4" />
-                            <circle r="7" fill="#10b981" />
-                        </g>
-
-                        <!-- Moving Pulse (груз едет Китай -> Алматы по той же линии, поверх точек) -->
-                        <g>
-                            <circle r="7" fill="#cfa76e" opacity="0.7">
-                                <animate attributeName="r" values="7;20" dur="1.5s" repeatCount="indefinite" />
-                                <animate attributeName="opacity" values="0.7;0" dur="1.5s" repeatCount="indefinite" />
-                            </circle>
-                            <circle r="7" fill="#FFFFFF" />
-                            <animateMotion path="M 150 280 Q 400 120 750 180" dur="6s" repeatCount="indefinite" />
-                        </g>
-                    </svg>
-
-                    <!-- Подписи (позиции привязаны к точкам в процентах от размера карты) -->
-                    <div class="absolute left-[16.67%] top-[70%] mt-8 -translate-x-1/2 glass-card p-4 rounded-xl border border-gold-500/30 max-w-[200px] text-center">
-                        <span class="text-[10px] font-bold text-gold-400 tracking-widest uppercase">ОТПРАВКА</span>
-                        <h4 class="font-bold text-white text-base">Заводы Китая</h4>
-                        <p class="text-[11px] text-zinc-400 mt-0.5">Гуанчжоу / Иу / Иньчуань</p>
-                    </div>
-
-                    <div class="absolute left-1/2 top-[42.81%] -mt-9 -translate-x-1/2 -translate-y-full glass-card p-4 rounded-xl border border-gold-500/40 max-w-[220px] text-center">
-                        <span class="text-[10px] font-bold text-gold-400 tracking-widest uppercase">ТАМОЖНЯ РК</span>
-                        <h4 class="font-bold text-white text-base">КПП Хоргос / МЦПС</h4>
-                        <p class="text-[11px] text-zinc-400 mt-0.5">Растаможка и сертификация</p>
-                    </div>
-
-                    <div class="absolute left-[83.33%] top-[45%] mt-10 -translate-x-1/2 glass-card p-4 rounded-xl border border-emerald-500/40 max-w-[220px] text-center">
-                        <span class="text-[10px] font-bold text-emerald-400 tracking-widest uppercase">НАЗНАЧЕНИЕ</span>
-                        <h4 class="font-bold text-white text-base">Склад в Алматы</h4>
-                        <p class="text-[11px] text-zinc-400 mt-0.5">Выгрузка & Двери-в-Двери</p>
-                    </div>
-                </div>
-
-                <!-- ===== Телефон / планшет (до 1024px): вертикальная карта ===== -->
-                <div class="lg:hidden relative mx-auto w-full max-w-[420px] aspect-[320/460] bg-dark-950/90 rounded-2xl overflow-hidden border border-white/5">
-
-                    <div class="absolute inset-0 bg-[radial-gradient(#cfa76e_1px,transparent_1px)] [background-size:20px_20px] opacity-15"></div>
-
-                    <svg viewBox="0 0 320 460" class="w-full h-full absolute inset-0 text-gold-500" role="img" aria-label="Маршрут: Китай, КПП Хоргос, Алматы">
-                        <defs>
-                            <linearGradient id="routeGradientV" gradientUnits="userSpaceOnUse" x1="0" y1="50" x2="0" y2="410">
-                                <stop offset="0%" stop-color="#dfba82" />
-                                <stop offset="50%" stop-color="#cfa76e" />
-                                <stop offset="100%" stop-color="#10b981" />
-                            </linearGradient>
-                        </defs>
-
-                        <path d="M 56 50 Q 136 230 56 410" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6" stroke-linecap="round"/>
-                        <path d="M 56 50 Q 136 230 56 410" fill="none" stroke="url(#routeGradientV)" stroke-width="5" class="animated-route-line" stroke-linecap="round"/>
-
-                        <!-- Китай -->
-                        <g transform="translate(56, 50)">
-                            <circle r="14" fill="#14161b" stroke="#dfba82" stroke-width="4" />
-                            <circle r="5" fill="#dfba82" />
-                        </g>
-
-                        <!-- КПП Хоргос: ровно середина кривой (t = 0.5) -> (96; 230) -->
-                        <g transform="translate(96, 230)">
-                            <circle r="14" fill="#14161b" stroke="#cfa76e" stroke-width="4" />
-                            <circle r="5" fill="#cfa76e" />
-                        </g>
-
-                        <!-- Алматы -->
-                        <g transform="translate(56, 410)">
-                            <circle r="18" fill="#14161b" stroke="#10b981" stroke-width="4" />
-                            <circle r="7" fill="#10b981" />
-                        </g>
-
-                        <g>
-                            <circle r="7" fill="#cfa76e" opacity="0.7">
-                                <animate attributeName="r" values="7;20" dur="1.5s" repeatCount="indefinite" />
-                                <animate attributeName="opacity" values="0.7;0" dur="1.5s" repeatCount="indefinite" />
-                            </circle>
-                            <circle r="7" fill="#FFFFFF" />
-                            <animateMotion path="M 56 50 Q 136 230 56 410" dur="6s" repeatCount="indefinite" />
-                        </g>
-                    </svg>
-
-                    <div class="absolute left-[28.75%] top-[10.87%] -translate-y-1/2 max-w-[56%] glass-card p-2.5 rounded-xl border border-gold-500/30">
-                        <span class="text-[9px] font-bold text-gold-400 tracking-widest uppercase">ОТПРАВКА</span>
-                        <h4 class="font-bold text-white text-sm leading-tight">Заводы Китая</h4>
-                        <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">Гуанчжоу / Иу / Иньчуань</p>
-                    </div>
-
-                    <div class="absolute left-[41.25%] top-[50%] -translate-y-1/2 max-w-[54%] glass-card p-2.5 rounded-xl border border-gold-500/40">
-                        <span class="text-[9px] font-bold text-gold-400 tracking-widest uppercase">ТАМОЖНЯ РК</span>
-                        <h4 class="font-bold text-white text-sm leading-tight">КПП Хоргос / МЦПС</h4>
-                        <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">Растаможка и сертификация</p>
-                    </div>
-
-                    <div class="absolute left-[28.75%] top-[89.13%] -translate-y-1/2 max-w-[56%] glass-card p-2.5 rounded-xl border border-emerald-500/40">
-                        <span class="text-[9px] font-bold text-emerald-400 tracking-widest uppercase">НАЗНАЧЕНИЕ</span>
-                        <h4 class="font-bold text-white text-sm leading-tight">Склад в Алматы</h4>
-                        <p class="text-[11px] text-zinc-400 mt-0.5 leading-snug">Выгрузка & Двери-в-Двери</p>
-                    </div>
-                </div>
-
-                <!-- Timeline Milestones -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mt-4 sm:mt-8">
-                    <div class="p-4 rounded-xl bg-dark-950/60 border border-white/5">
-                        <div class="text-xs font-bold text-gold-400 uppercase tracking-wider">Шаг 1: Консолидация (1-3 дня)</div>
-                        <p class="text-xs text-zinc-400 mt-1">Приемка на нашем складе в КНР, проверке упаковки и маркировка для таможни РК.</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-dark-950/60 border border-white/5">
-                        <div class="text-xs font-bold text-gold-400 uppercase tracking-wider">Шаг 2: Граница Хоргос (1-2 дня)</div>
-                        <p class="text-xs text-zinc-400 mt-1">Быстрое прохождение постов декларирования по ускоренной процедуре ВЭД.</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-dark-950/60 border border-white/5">
-                        <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Шаг 3: Алматы (1 день)</div>
-                        <p class="text-xs text-zinc-400 mt-1">Адресная доставка манипулятором или фурой прямо на ваш склад в Алматы.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE TABBED SERVICES SHOWCASE -->
+    <!-- SERVICES -->
     <section id="services-tabs" class="py-16 sm:py-24 bg-dark-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-12 reveal-element">
-                <span class="text-[11px] sm:text-xs font-extrabold tracking-[0.15em] sm:tracking-[0.25em] text-gold-500 uppercase" data-i18n="tabs_subtitle">B2B Услуги в Алматы</span>
-                <h2 class="text-2xl sm:text-4xl font-black text-white mt-2" data-i18n="tabs_title">Управление поставками под ключ</h2>
-                <p class="text-zinc-400 text-xs sm:text-sm mt-3" data-i18n="tabs_desc">Выберите направление для подробной информации о процессе взаимодействия.</p>
+
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-element">
+                <span class="text-[11px] sm:text-xs font-extrabold tracking-[0.15em] sm:tracking-[0.25em] text-gold-500 uppercase" data-i18n="tabs_subtitle">Что мы делаем</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mt-2" data-i18n="tabs_title">Наши услуги</h2>
+                <p class="text-zinc-400 text-xs sm:text-sm mt-3" data-i18n="tabs_desc">Пять основных направлений — от поиска производителя до доставки готовой партии.</p>
             </div>
 
-            <!-- Tab Buttons -->
-            <div class="grid grid-cols-1 sm:flex sm:flex-wrap sm:justify-center gap-2.5 sm:gap-3 mb-8 sm:mb-10 reveal-element">
-                <button onclick="switchTab('tab-sourcing')" id="btn-tab-sourcing" class="tab-btn active w-full sm:w-auto px-5 sm:px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border border-gold-500 bg-gold-500 text-black shadow-[0_0_20px_rgba(207,167,110,0.3)]">
-                    <i data-lucide="search" class="w-4 h-4 inline-block mr-2"></i>
-                    <span data-i18n="tab_btn_1">Поиск заводов & Аудит</span>
-                </button>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
 
-                <button onclick="switchTab('tab-logistics')" id="btn-tab-logistics" class="tab-btn w-full sm:w-auto px-5 sm:px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border border-white/10 bg-dark-800 text-zinc-400 hover:text-white">
-                    <i data-lucide="truck" class="w-4 h-4 inline-block mr-2"></i>
-                    <span data-i18n="tab_btn_2">Доставка в Алматы</span>
-                </button>
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element flex flex-col lg:col-span-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center">
+                            <i data-lucide="search" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-3xl font-black gold-gradient-text font-mono">01</span>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-i18n="s1_t">Поиск производителей и поставщиков</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed flex-1" data-i18n="s1_d">Находим производителей и поставщиков в Китае в соответствии с требованиями заказчика, подбираем продукцию, запрашиваем предложения и согласовываем условия сотрудничества.</p>
+                    <button onclick="openRfqModal('Поиск производителей и поставщиков')" class="mt-6 w-full sm:w-auto self-start px-6 py-3 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg" data-i18n="svc_btn">Запросить расчёт</button>
+                </div>
 
-                <button onclick="switchTab('tab-customs')" id="btn-tab-customs" class="tab-btn w-full sm:w-auto px-5 sm:px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border border-white/10 bg-dark-800 text-zinc-400 hover:text-white">
-                    <i data-lucide="file-check" class="w-4 h-4 inline-block mr-2"></i>
-                    <span data-i18n="tab_btn_3">Растаможка РК & ВЭД</span>
-                </button>
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element flex flex-col lg:col-span-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center">
+                            <i data-lucide="badge-check" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-3xl font-black gold-gradient-text font-mono">02</span>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-i18n="s2_t">Корпоративная продукция и брендирование</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed flex-1" data-i18n="s2_d">Организуем производство корпоративного мерча и промопродукции с логотипом заказчика: сумок, рюкзаков, электроники, аксессуаров и подарков.</p>
+                    <button onclick="openRfqModal('Корпоративная продукция и брендирование')" class="mt-6 w-full sm:w-auto self-start px-6 py-3 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg" data-i18n="svc_btn">Запросить расчёт</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element flex flex-col lg:col-span-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center">
+                            <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-3xl font-black gold-gradient-text font-mono">03</span>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-i18n="s3_t">Контроль качества</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed flex-1" data-i18n="s3_d">Организуем проверку образцов и готовой продукции, согласование характеристик, комплектации и внешнего вида перед отправкой заказа.</p>
+                    <button onclick="openRfqModal('Контроль качества')" class="mt-6 w-full sm:w-auto self-start px-6 py-3 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg" data-i18n="svc_btn">Запросить расчёт</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element flex flex-col lg:col-span-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center">
+                            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-3xl font-black gold-gradient-text font-mono">04</span>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-i18n="s4_t">Закупка и сопровождение заказов</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed flex-1" data-i18n="s4_d">Взаимодействуем с поставщиками, согласовываем стоимость, характеристики, сроки производства и условия поставки. Сопровождаем заказ на всех этапах.</p>
+                    <button onclick="openRfqModal('Закупка и сопровождение заказов')" class="mt-6 w-full sm:w-auto self-start px-6 py-3 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg" data-i18n="svc_btn">Запросить расчёт</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element flex flex-col lg:col-span-1">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center">
+                            <i data-lucide="truck" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-3xl font-black gold-gradient-text font-mono">05</span>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3" data-i18n="s5_t">Логистика и доставка</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed flex-1" data-i18n="s5_d">Организуем доставку товаров из Китая в Казахстан, взаимодействие с логистическими партнёрами и сопровождение таможенного оформления.</p>
+                    <button onclick="openRfqModal('Логистика и доставка')" class="mt-6 w-full sm:w-auto self-start px-6 py-3 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg" data-i18n="svc_btn">Запросить расчёт</button>
+                </div>
+
+                <!-- Quality note card -->
+                <div class="rounded-2xl p-6 sm:p-8 border border-gold-500/30 bg-gold-500/5 reveal-element flex flex-col justify-center gap-4">
+                    <div class="flex items-start gap-3 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i>
+                        <span data-i18n="qc_1">Организуем проверку качества продукции перед отправкой и помогаем минимизировать риски получения некачественного товара.</span>
+                    </div>
+                    <div class="flex items-start gap-3 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i>
+                        <span data-i18n="qc_2">Организуем контроль качества продукции на этапе производства и перед отправкой.</span>
+                    </div>
+                </div>
             </div>
-
-            <!-- Tab Content Containers (Animated Fade/Slide) -->
-            <div class="relative sm:min-h-[360px]">
-                
-                <!-- TAB 1: SOURCING -->
-                <div id="tab-sourcing" class="tab-content transition-all duration-500 opacity-100 scale-100 block">
-                    <div class="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-                        <div class="space-y-4">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-gold-500 px-3 py-1 rounded bg-gold-500/10">STAGE 01</span>
-                            <h3 class="text-xl sm:text-2xl font-black text-white" data-i18n="tab1_title">Прямой поиск производителей в КНР</h3>
-                            <p class="text-zinc-400 text-sm leading-relaxed" data-i18n="tab1_desc">
-                                Мы выезжаем на фабрики в Гуанчжоу, Шэньчжэне и Нинбо. Проверяем юридическую чистоту, производственные мощности, наличие сертификатов ISO и делаем закуп образцов перед партией.
-                            </p>
-                            <ul class="space-y-2.5 text-xs text-zinc-300 font-medium">
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Проверка оборудования и квалификации инженеров</li>
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Выкуп образцов и доставка курьером в Алматы</li>
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Переговоры о лучшей цене напрямую с директором завода</li>
-                            </ul>
-                            <button onclick="openRfqModal('Поиск заводов')" class="mt-4 w-full sm:w-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg">
-                                Заказать поиск фабрики
-                            </button>
-                        </div>
-                        <div class="bg-dark-900 rounded-2xl p-4 sm:p-6 border border-white/5 space-y-4">
-                            <div class="font-bold text-white text-sm border-b border-white/10 pb-3">Что входит в инспекцию:</div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Проверка сырья и компонентов</span>
-                                <span class="text-gold-400 font-bold">100%</span>
-                            </div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Отчет о фабрике (30+ фото/видео)</span>
-                                <span class="text-gold-400 font-bold">Да</span>
-                            </div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Тестирование функций готовой продукции</span>
-                                <span class="text-gold-400 font-bold">Да</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 2: LOGISTICS -->
-                <div id="tab-logistics" class="tab-content transition-all duration-500 opacity-0 scale-95 hidden">
-                    <div class="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-                        <div class="space-y-4">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-gold-500 px-3 py-1 rounded bg-gold-500/10">STAGE 02</span>
-                            <h3 class="text-xl sm:text-2xl font-black text-white" data-i18n="tab2_title">Авто и Ж/Д Логистика Китай &rarr; Алматы</h3>
-                            <p class="text-zinc-400 text-sm leading-relaxed" data-i18n="tab2_desc">
-                                Оптимизированные маршруты доставки сборных (LCL) и генеральных (FCL) контейнерных грузов. Доставка до складов в районе Северного Кольца, Первомайки и промзон Алматы.
-                            </p>
-                            <ul class="space-y-2.5 text-xs text-zinc-300 font-medium">
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Экспресс-автодоставка (12-15 дней)</li>
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Поездные контейнерные отправки (18-22 дня)</li>
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Страхование груза от повреждений и утери</li>
-                            </ul>
-                            <button onclick="openRfqModal('Расчет логистики в Алматы')" class="mt-4 w-full sm:w-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg">
-                                Запросить тарификацию
-                            </button>
-                        </div>
-                        <div class="bg-dark-900 rounded-2xl p-4 sm:p-6 border border-white/5 space-y-4">
-                            <div class="font-bold text-white text-sm border-b border-white/10 pb-3">Преимущества наших авторейсов:</div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Прямой въезд через Хоргос</span>
-                                <span class="text-emerald-400 font-bold">Без задержек</span>
-                            </div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Собственный автопарк фур</span>
-                                <span class="text-gold-400 font-bold">20+ единиц</span>
-                            </div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>GPS-трекинг по Казахстану</span>
-                                <span class="text-gold-400 font-bold">24/7</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 3: CUSTOMS -->
-                <div id="tab-customs" class="tab-content transition-all duration-500 opacity-0 scale-95 hidden">
-                    <div class="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-                        <div class="space-y-4">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-gold-500 px-3 py-1 rounded bg-gold-500/10">STAGE 03</span>
-                            <h3 class="text-xl sm:text-2xl font-black text-white" data-i18n="tab3_title">Таможенная очистка (Растаможка РК)</h3>
-                            <p class="text-zinc-400 text-sm leading-relaxed" data-i18n="tab3_desc">
-                                Полная легализация товара. Вы получаете товар с уплаченным НДС, декларацией на товары (ГТД / ДТ), сертификатами соответствия и всеми закрывающими документами для бухгалтерии в РК.
-                            </p>
-                            <ul class="space-y-2.5 text-xs text-zinc-300 font-medium">
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Корректный подбор ТН ВЭД кодов</li>
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Сертификация ЕАЭС и Декларации Соответствия</li>
-                                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold-500"></i> Оплата в тенге (KZT) с предоставлением ЭСФ</li>
-                            </ul>
-                            <button onclick="openRfqModal('Таможенное оформление')" class="mt-4 w-full sm:w-auto px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-black gold-gradient-bg rounded-lg">
-                                Консультация декларанта
-                            </button>
-                        </div>
-                        <div class="bg-dark-900 rounded-2xl p-4 sm:p-6 border border-white/5 space-y-4">
-                            <div class="font-bold text-white text-sm border-b border-white/10 pb-3">Документы для бизнеса РК:</div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Электронная счет-фактура (ЭСФ)</span>
-                                <span class="text-gold-400 font-bold">100% Выгрузка</span>
-                            </div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Декларация на товары (ДТ)</span>
-                                <span class="text-gold-400 font-bold">Официально</span>
-                            </div>
-                            <div class="info-row flex items-center justify-between gap-3 text-xs text-zinc-400">
-                                <span>Акт выполненных работ / Накладная</span>
-                                <span class="text-gold-400 font-bold">Форма З-2</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
 
-    <!-- WHY CHOOSE US / ADVANTAGES SECTION -->
-    <section id="advantages" class="py-16 sm:py-24 bg-dark-900 border-t border-white/5">
+    <!-- ADVANTAGES -->
+    <section id="advantages" class="py-16 sm:py-24 bg-dark-900 border-y border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-element">
                 <span class="text-[11px] sm:text-xs font-extrabold tracking-[0.15em] sm:tracking-[0.25em] text-gold-500 uppercase" data-i18n="adv_subtitle">Почему PROVANTRA B2B</span>
-                <h2 class="text-2xl sm:text-4xl font-black text-white mt-2" data-i18n="adv_title">Преимущества работы с нами в Алматы</h2>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mt-2" data-i18n="adv_title">Почему выбирают PROVANTRA B2B</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-5 md:gap-8">
-                
-                <!-- Advantage 1 -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
+
                 <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element">
                     <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center mb-6">
-                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                        <i data-lucide="layers" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="adv1_h">Локальный офис в Алматы</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="adv1_p">
-                        Вам не нужно общаться с зарубежными агентами с разницей во времени. Наш менеджер в Алматы всегда на связи и готов приехать на личную встречу.
-                    </p>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="a1_h">Комплексный подход</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="a1_p">Объединяем поиск поставщиков, закупку, брендирование, контроль качества и логистику в едином процессе.</p>
                 </div>
 
-                <!-- Advantage 2 -->
                 <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element">
                     <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center mb-6">
-                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                        <i data-lucide="target" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="adv2_h">Финансовая ответственность</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="adv2_p">
-                        Зафиксированная стоимость в договоре поставки. Мы берем на себя риски изменения таможенных пошлин и форс-мажоров в пути.
-                    </p>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="a2_h">Индивидуальный подбор</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="a2_p">Подбираем продукцию и производителей с учётом бюджета, требований и задач каждого заказчика.</p>
                 </div>
 
-                <!-- Advantage 3 -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center mb-6">
+                        <i data-lucide="route" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="a3_h">Сопровождение заказа</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="a3_p">Координируем взаимодействие с поставщиками и партнёрами на всех этапах поставки.</p>
+                </div>
+
                 <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element">
                     <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center mb-6">
                         <i data-lucide="check-square" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="adv3_h">Инспекции 100% Качества</h3>
-                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="adv3_p">
-                        Наши штатные инспекторы в Гуанчжоу и Иу лично проверяют каждую коробку до погрузки в фуру. Бракованный товар возвращается заводу.
-                    </p>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="a4_h">Контроль качества</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="a4_p">Организуем проверку образцов и готовой продукции в соответствии с согласованными требованиями.</p>
                 </div>
 
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center mb-6">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="a5_h">Решения для бизнеса</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="a5_p">Работаем с корпоративными заказами, оптовыми партиями и индивидуальными запросами компаний.</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-gold-500/40 transition-all reveal-element">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 border border-gold-500/30 flex items-center justify-center mb-6">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3" data-i18n="a6_h">География поставок</h3>
+                    <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed" data-i18n="a6_p">Организуем поставки из Китая в Алматы и другие регионы Казахстана.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERY / LOGISTICS -->
+    <section id="route" class="py-16 sm:py-24 bg-dark-950 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-element">
+                <span class="text-[11px] sm:text-xs font-extrabold tracking-[0.15em] sm:tracking-[0.25em] text-gold-500 uppercase" data-i18n="route_subtitle">Логистика</span>
+                <h2 class="text-2xl sm:text-4xl font-black text-white mt-2" data-i18n="route_title">Организация поставок из Китая в Казахстан</h2>
+                <p class="text-zinc-400 text-xs sm:text-sm mt-3" data-i18n="route_desc">Выстраиваем логистический процесс с учётом типа продукции, объёма партии, сроков и бюджета заказчика.</p>
+            </div>
+
+            <div class="glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-gold-500/20 reveal-element">
+                <h3 class="text-lg sm:text-2xl font-black text-white mb-5 sm:mb-6 flex items-center gap-3">
+                    <i data-lucide="route" class="w-5 h-5 sm:w-6 sm:h-6 text-gold-500"></i>
+                    <span data-i18n="route_head">Китай → Казахстан</span>
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+
+                    <div class="relative p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                        <div class="text-2xl font-black gold-gradient-text font-mono mb-2">1</div>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed" data-i18n="r1">Согласование условий поставки.</p>
+                    </div>
+
+                    <div class="relative p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                        <div class="text-2xl font-black gold-gradient-text font-mono mb-2">2</div>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed" data-i18n="r2">Подготовка и отправка заказа.</p>
+                    </div>
+
+                    <div class="relative p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                        <div class="text-2xl font-black gold-gradient-text font-mono mb-2">3</div>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed" data-i18n="r3">Организация международной перевозки.</p>
+                    </div>
+
+                    <div class="relative p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                        <div class="text-2xl font-black gold-gradient-text font-mono mb-2">4</div>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed" data-i18n="r4">Сопровождение таможенного оформления.</p>
+                    </div>
+
+                    <div class="relative p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                        <div class="text-2xl font-black gold-gradient-text font-mono mb-2">5</div>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed" data-i18n="r5">Доставка груза в пункт назначения.</p>
+                    </div>
+
+                </div>
+                <p class="text-xs sm:text-sm text-zinc-400 mt-5 sm:mt-6 leading-relaxed" data-i18n="route_note">Подбираем подходящий вариант логистики совместно с партнёрами, исходя из особенностей конкретного заказа.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-6 pt-6 border-t border-white/10">
+
+                <div class="p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="handshake" class="w-4 h-4 text-gold-500 flex-shrink-0"></i>
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider" data-i18n="n1_h">Логистические партнёры</h4>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed" data-i18n="n1_p">Организуем доставку товаров из Китая в Казахстан через логистических партнёров.</p>
+                </div>
+
+                <div class="p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="file-check" class="w-4 h-4 text-gold-500 flex-shrink-0"></i>
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider" data-i18n="n2_h">Таможенное оформление</h4>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed" data-i18n="n2_p">Сопровождаем процесс таможенного оформления и организуем взаимодействие с профильными специалистами.</p>
+                </div>
+
+                <div class="p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="map-pinned" class="w-4 h-4 text-gold-500 flex-shrink-0"></i>
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider" data-i18n="n3_h">Статус доставки</h4>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed" data-i18n="n3_p">Предоставляем информацию о статусе доставки и сопровождаем заказ на протяжении логистического процесса.</p>
+                </div>
+
+                <div class="p-4 sm:p-5 rounded-xl bg-dark-950/60 border border-white/5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="calculator" class="w-4 h-4 text-gold-500 flex-shrink-0"></i>
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider" data-i18n="n4_h">Расходы и условия</h4>
+                    </div>
+                    <p class="text-xs text-zinc-400 leading-relaxed" data-i18n="n4_p">Помогаем заранее оценить логистические и таможенные расходы и согласовать условия поставки.</p>
+                </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -776,7 +645,8 @@
                         <span class="font-extrabold text-xl tracking-widest text-white">PROVANTRA</span>
                     </a>
                     <p class="text-xs text-zinc-400 leading-relaxed">
-                        Прямой оператор B2B поставок оборудования, комплектующих и товаров из Китая с доставкой по Алматы и всему Казахстану.
+                        Комплексные B2B-поставки из Китая в Казахстан: поиск производителей, закупка, брендирование, контроль качества и логистика.</p>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Работаем с клиентами по всему Казахстану. Организуем поставки с доставкой в Алматы и другие регионы.
                     </p>
                     <div class="text-xs text-zinc-500 font-mono">
                         &copy; 2026 PROVANTRA B2B. Алматы қаласы.
@@ -787,16 +657,16 @@
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Навигация</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="#route" class="hover:text-gold-500 transition-colors">Маршрут Китай-Алматы</a></li>
-                        <li><a href="#services-tabs" class="hover:text-gold-500 transition-colors">Услуги сорсинга</a></li>
+                        <li><a href="#services-tabs" class="hover:text-gold-500 transition-colors">Услуги</a></li>
                         <li><a href="#advantages" class="hover:text-gold-500 transition-colors">Преимущества</a></li>
+                        <li><a href="#route" class="hover:text-gold-500 transition-colors">Доставка</a></li>
                         <li><a href="#contacts" class="hover:text-gold-500 transition-colors">Контакты</a></li>
                     </ul>
                 </div>
 
                 <!-- Col 3: Contacts in Almaty -->
                 <div>
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Офис в Алматы</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Контакты</h4>
                     <ul class="space-y-3 text-xs">
                         <li class="flex items-center gap-2.5">
                             <i data-lucide="mail" class="w-4 h-4 text-gold-500 flex-shrink-0"></i>
@@ -846,9 +716,9 @@
             </button>
 
             <div class="mb-5 sm:mb-6 pr-8">
-                <span class="text-[10px] font-bold tracking-widest text-gold-500 uppercase">PROVANTRA ALMATY</span>
+                <span class="text-[10px] font-bold tracking-widest text-gold-500 uppercase">PROVANTRA B2B</span>
                 <h3 class="text-xl sm:text-2xl font-black text-white mt-1">Запрос расчета поставки</h3>
-                <p class="text-xs text-zinc-400 mt-1">Заполните детали товара и наш специалист в Алматы рассчитает смету под ключ.</p>
+                <p class="text-xs text-zinc-400 mt-1">Заполните детали запроса — наш специалист свяжется с вами и подготовит расчёт.</p>
             </div>
 
             <form id="rfq-form" onsubmit="handleRfqSubmit(event)" class="space-y-4">
@@ -869,13 +739,13 @@
                 </div>
 
                 <div>
-                    <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Что требуется привезти из Китая?</label>
-                    <input type="text" id="rfq-service-field" placeholder="Например: ЧПУ Станок / Текстиль 2000 м / Светодиоды" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
+                    <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Какую продукцию нужно поставить из Китая?</label>
+                    <input type="text" id="rfq-service-field" placeholder="Например: рюкзаки с логотипом / электроника / аксессуары" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
                 </div>
 
                 <div>
                     <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Комментарий / Объём партии</label>
-                    <textarea rows="3" placeholder="Укажите объём, размеры или вес партии..." class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
+                    <textarea rows="3" placeholder="Укажите объём партии, требования, сроки..." class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
                 </div>
 
                 <label class="flex items-start gap-3 text-xs leading-relaxed text-zinc-400 cursor-pointer select-none">
@@ -893,7 +763,7 @@
                     <i data-lucide="check-circle-2" class="w-6 h-6"></i>
                 </div>
                 <h4 class="text-xl font-bold text-white">Заявка принята!</h4>
-                <p class="text-xs text-zinc-400">Менеджер офиса PROVANTRA в Алматы свяжется с вами в ближайшее время.</p>
+                <p class="text-xs text-zinc-400">Менеджер PROVANTRA свяжется с вами в ближайшее время.</p>
             </div>
         </div>
     </div>
@@ -984,145 +854,268 @@
 
         // 1. DYNAMIC TRANSLATION DICTIONARY (RU / KK / EN)
         const i18nData = {
-            ru: {
-                nav_route: "Маршрут Китай-Алматы",
-                nav_services: "Услуги",
-                nav_advantages: "Преимущества",
-                nav_contacts: "Контакты",
-                btn_rfq: "Запросить КП",
-                hero_badge: "B2B Поставки под ключ в Алматы",
-                hero_title_1: "Прямые поставки оборудования и товаров из Китая",
-                hero_title_2: "прямо на ваш склад в Алматы",
-                hero_desc: "PROVANTRA B2B берет на себя весь комплекс задач: инспекция заводов в Китае, контрактование, таможенное оформление (растаможка) и доставка до дверей любого бизнеса в Алматы.",
-                hero_cta: "Рассчитать стоимость доставки в Алматы",
-                hero_route_btn: "Смотреть маршрут",
-                stat_1: "Гарантия очистки",
-                stat_2: "Дней экспресс-доставка",
-                stat_3: "Локальный офис и склад",
-                stat_4: "Риск брака (QC)",
-                live_step1_title: "Гуанчжоу / Иу (Китай)",
-                live_step1_desc: "Инспекция, консолидация и погрузка на авто/ж/д",
-                live_step2_title: "КПП Хоргос (Таможня РК)",
-                live_step2_desc: "Таможенное декларирование и получение СТ-1 / ДС",
-                live_step3_title: "Склад Алматы (Доставка)",
-                live_step3_desc: "Разгрузка, финальный осмотр и передача документов",
-                route_subtitle: "Прозрачная логистическая артерия",
-                route_title: "Маршрут доставки: Китай → Хоргос → Алматы",
-                route_desc: "Прямой авто- и ж/д коридор с минимальным временем прохождения таможенных процедур на границе РК.",
-                tabs_subtitle: "B2B Услуги в Алматы",
-                tabs_title: "Управление поставками под ключ",
-                tabs_desc: "Выберите направление для подробной информации о процессе взаимодействия.",
-                tab_btn_1: "Поиск заводов & Аудит",
-                tab_btn_2: "Доставка в Алматы",
-                tab_btn_3: "Растаможка РК & ВЭД",
-                tab1_title: "Прямой поиск производителей в КНР",
-                tab1_desc: "Мы выезжаем на фабрики в Гуанчжоу, Шэньчжэне и Нинбо. Проверяем юридическую чистоту, производственные мощности, наличие сертификатов ISO и делаем закуп образцов перед партией.",
-                tab2_title: "Авто и Ж/Д Логистика Китай → Алматы",
-                tab2_desc: "Оптимизированные маршруты доставки сборных (LCL) и генеральных (FCL) контейнерных грузов. Доставка до складов в районе Северного Кольца, Первомайки и промзон Алматы.",
-                tab3_title: "Таможенная очистка (Растаможка РК)",
-                tab3_desc: "Полная легализация товара. Вы получаете товар с уплаченным НДС, декларацией на товары (ГТД / ДТ), сертификатами соответствия и всеми закрывающими документами для бухгалтерии в РК.",
-                adv_subtitle: "Почему PROVANTRA B2B",
-                adv_title: "Преимущества работы с нами в Алматы",
-                adv1_h: "Локальный офис в Алматы",
-                adv1_p: "Вам не нужно общаться с зарубежными агентами с разницей во времени. Наш менеджер в Алматы всегда на связи и готов приехать на личную встречу.",
-                adv2_h: "Финансовая ответственность",
-                adv2_p: "Зафиксированная стоимость в договоре поставки. Мы берем на себя риски изменения таможенных пошлин и форс-мажоров в пути.",
-                adv3_h: "Инспекции 100% Качества",
-                adv3_p: "Наши штатные инспекторы в Гуанчжоу и Иу лично проверяют каждую коробку до погрузки в фуру. Бракованный товар возвращается заводу."
+            "ru": {
+                        "nav_services": "Услуги",
+                        "nav_advantages": "Преимущества",
+                        "nav_route": "Доставка",
+                        "nav_contacts": "Контакты",
+                        "btn_rfq": "Запросить КП",
+                        "hero_badge": "Sourcing & Supply",
+                        "hero_title_1": "Комплексные B2B-поставки из Китая",
+                        "hero_title_2": "для вашего бизнеса",
+                        "hero_desc": "Находим производителей, организуем закупку, брендирование, контроль качества и доставку корпоративной продукции в Казахстан.",
+                        "hero_desc2": "От поиска подходящего товара до получения готовой партии — сопровождаем каждый этап поставки.",
+                        "hero_cta": "Запросить расчёт",
+                        "hero_route_btn": "Наши услуги",
+                        "stat_1_v": "5",
+                        "stat_1": "направлений услуг",
+                        "stat_2_v": "B2B",
+                        "stat_2": "корпоративные заказы",
+                        "stat_3_v": "Китай → KZ",
+                        "stat_3": "поставки под задачу",
+                        "stat_4_v": "Алматы +",
+                        "stat_4": "регионы Казахстана",
+                        "card_badge": "B2B PROCESS",
+                        "card_title": "Единый процесс поставки",
+                        "card1_t": "Поиск и закупка",
+                        "card1_d": "Производители, предложения, условия сотрудничества",
+                        "card2_t": "Брендирование и контроль качества",
+                        "card2_d": "Логотип заказчика, проверка образцов и готовой продукции",
+                        "card3_t": "Логистика и доставка",
+                        "card3_d": "Организация перевозки и сопровождение таможенного оформления",
+                        "card_f1": "Индивидуальный подбор",
+                        "card_f2": "Алматы и регионы РК",
+                        "tabs_subtitle": "Что мы делаем",
+                        "tabs_title": "Наши услуги",
+                        "tabs_desc": "Пять основных направлений — от поиска производителя до доставки готовой партии.",
+                        "s1_t": "Поиск производителей и поставщиков",
+                        "s1_d": "Находим производителей и поставщиков в Китае в соответствии с требованиями заказчика, подбираем продукцию, запрашиваем предложения и согласовываем условия сотрудничества.",
+                        "s2_t": "Корпоративная продукция и брендирование",
+                        "s2_d": "Организуем производство корпоративного мерча и промопродукции с логотипом заказчика: сумок, рюкзаков, электроники, аксессуаров и подарков.",
+                        "s3_t": "Контроль качества",
+                        "s3_d": "Организуем проверку образцов и готовой продукции, согласование характеристик, комплектации и внешнего вида перед отправкой заказа.",
+                        "s4_t": "Закупка и сопровождение заказов",
+                        "s4_d": "Взаимодействуем с поставщиками, согласовываем стоимость, характеристики, сроки производства и условия поставки. Сопровождаем заказ на всех этапах.",
+                        "s5_t": "Логистика и доставка",
+                        "s5_d": "Организуем доставку товаров из Китая в Казахстан, взаимодействие с логистическими партнёрами и сопровождение таможенного оформления.",
+                        "svc_btn": "Запросить расчёт",
+                        "qc_1": "Организуем проверку качества продукции перед отправкой и помогаем минимизировать риски получения некачественного товара.",
+                        "qc_2": "Организуем контроль качества продукции на этапе производства и перед отправкой.",
+                        "adv_subtitle": "Почему PROVANTRA B2B",
+                        "adv_title": "Почему выбирают PROVANTRA B2B",
+                        "a1_h": "Комплексный подход",
+                        "a1_p": "Объединяем поиск поставщиков, закупку, брендирование, контроль качества и логистику в едином процессе.",
+                        "a2_h": "Индивидуальный подбор",
+                        "a2_p": "Подбираем продукцию и производителей с учётом бюджета, требований и задач каждого заказчика.",
+                        "a3_h": "Сопровождение заказа",
+                        "a3_p": "Координируем взаимодействие с поставщиками и партнёрами на всех этапах поставки.",
+                        "a4_h": "Контроль качества",
+                        "a4_p": "Организуем проверку образцов и готовой продукции в соответствии с согласованными требованиями.",
+                        "a5_h": "Решения для бизнеса",
+                        "a5_p": "Работаем с корпоративными заказами, оптовыми партиями и индивидуальными запросами компаний.",
+                        "a6_h": "География поставок",
+                        "a6_p": "Организуем поставки из Китая в Алматы и другие регионы Казахстана.",
+                        "route_subtitle": "Логистика",
+                        "route_title": "Организация поставок из Китая в Казахстан",
+                        "route_desc": "Выстраиваем логистический процесс с учётом типа продукции, объёма партии, сроков и бюджета заказчика.",
+                        "route_head": "Китай → Казахстан",
+                        "r1": "Согласование условий поставки.",
+                        "r2": "Подготовка и отправка заказа.",
+                        "r3": "Организация международной перевозки.",
+                        "r4": "Сопровождение таможенного оформления.",
+                        "r5": "Доставка груза в пункт назначения.",
+                        "route_note": "Подбираем подходящий вариант логистики совместно с партнёрами, исходя из особенностей конкретного заказа.",
+                        "n1_h": "Логистические партнёры",
+                        "n1_p": "Организуем доставку товаров из Китая в Казахстан через логистических партнёров.",
+                        "n2_h": "Таможенное оформление",
+                        "n2_p": "Сопровождаем процесс таможенного оформления и организуем взаимодействие с профильными специалистами.",
+                        "n3_h": "Статус доставки",
+                        "n3_p": "Предоставляем информацию о статусе доставки и сопровождаем заказ на протяжении логистического процесса.",
+                        "n4_h": "Расходы и условия",
+                        "n4_p": "Помогаем заранее оценить логистические и таможенные расходы и согласовать условия поставки.",
+                        "f_about": "Комплексные B2B-поставки из Китая в Казахстан: поиск производителей, закупка, брендирование, контроль качества и логистика.",
+                        "f_geo": "Работаем с клиентами по всему Казахстану. Организуем поставки с доставкой в Алматы и другие регионы.",
+                        "f_nav": "Навигация",
+                        "f_contacts": "Контакты",
+                        "f_hours": "Режим работы",
+                        "f_btn": "Запросить расчёт",
+                        "f_privacy": "Политика конфиденциальности"
             },
-            kk: {
-                nav_route: "Қытай-Алматы бағыты",
-                nav_services: "Қызметтер",
-                nav_advantages: "Артықшылықтар",
-                nav_contacts: "Байланыс",
-                btn_rfq: "Ұсыныс алу",
-                hero_badge: "Алматыдағы дайын B2B жеткізілімдері",
-                hero_title_1: "Қытайдан зауыттық құрал-жабдықтар мен тауарларды",
-                hero_title_2: "Алматыдағы қоймаңызға тікелей жеткізу",
-                hero_desc: "PROVANTRA B2B барлық міндеттерді өз мойнына алады: Қытайдағы зауыттарды тексеру, шарттар жасасу, кедендік рәсімдеу және Алматыдағы кез келген бизнеске дейін жеткізу.",
-                hero_cta: "Алматыға жеткізу құнын есептеу",
-                hero_route_btn: "Бағытты қарау",
-                stat_1: "Кедендік кепілдік",
-                stat_2: "Күн экспресс-жеткізу",
-                stat_3: "Алматыдағы офис пен қойма",
-                stat_4: "Ақаулық қаупі (QC)",
-                live_step1_title: "Гуанчжоу / Иу (Қытай)",
-                live_step1_desc: "Инспекция, консолидация және жүк тиеу",
-                live_step2_title: "Қорғас өткізу пункті (ҚР Кедені)",
-                live_step2_desc: "Декларациялау және СТ-1 сертификатын алу",
-                live_step3_title: "Алматы қоймасы (Жеткізу)",
-                live_step3_desc: "Жүкт түсіру және құжаттарды тапсыру",
-                route_subtitle: "Ашық логистикалық маршурт",
-                route_title: "Жеткізу бағыты: Қытай → Қорғас → Алматы",
-                route_desc: "Қазақстан шекарасында кедендік рәсімдеуден тез өтетін тікелей авто және теміржол дәлізі.",
-                tabs_subtitle: "Алматыдағы B2B Қызметтер",
-                tabs_title: "Жеткізілімді толық басқару",
-                tabs_desc: "Өзара әрекеттесу процесі туралы толық ақпарат алу үшін бағытты таңдаңыз.",
-                tab_btn_1: "Зауыттарды іздеу & Аудит",
-                tab_btn_2: "Алматыға жеткізу",
-                tab_btn_3: "ҚР Кедені & Сыртқы сауда",
-                tab1_title: "Қытайдағы өндірушілерді тікелей іздеу",
-                tab1_desc: "Байланыс пен зауыттарды тексереміз. Гуанчжоу, Шэньчжэнь зауыттарына барып, ISO сертификаттарын тексереміз.",
-                tab2_title: "Қытай → Алматы авто және т/ж логистикасы",
-                tab2_desc: "Құрама (LCL) және контейнерлік (FCL) жүктерді жеткізу. Алматы қаласының өнеркәсіптік аймақтарына дейін жеткізу.",
-                tab3_title: "Кедендік тазарту (Алматы кедені)",
-                tab3_desc: "Тауарды толық заңдастыру. Сіз ҚҚС төленген тауарды, ДТ декларациясын және барлық есептік құжаттарды аласыз.",
-                adv_subtitle: "Неліктен PROVANTRA B2B",
-                adv_title: "Алматыда бізбен жұмыс істеудің артықшылықтары",
-                adv1_h: "Алматыдағы жергілікті офис",
-                adv1_p: "Уақыт айырмашылығы бар шетелдік агенттермен сөйлесудің қажеті жоқ. Алматыдағы менеджеріміз әрқашан байланыста.",
-                adv2_h: "Қаржылық жауапкершілік",
-                adv2_p: "Шартта бекітілген баға. Біз кедендік баждардың өзгеру қаупін өз мойнымызға аламыз.",
-                adv3_h: "100% Сапа инспекциясы",
-                adv3_p: "Гуанчжоу мен Иу-дағы инспекторларымыз жүк тиелгенге дейін әрбір қорапты жеке тексереді."
+            "kk": {
+                        "nav_services": "Қызметтер",
+                        "nav_advantages": "Артықшылықтар",
+                        "nav_route": "Жеткізу",
+                        "nav_contacts": "Байланыс",
+                        "btn_rfq": "Ұсыныс алу",
+                        "hero_badge": "Sourcing & Supply",
+                        "hero_title_1": "Қытайдан кешенді B2B жеткізілімдері",
+                        "hero_title_2": "сіздің бизнесіңіз үшін",
+                        "hero_desc": "Өндірушілерді табамыз, сатып алуды, брендтеуді, сапаны бақылауды және корпоративтік өнімді Қазақстанға жеткізуді ұйымдастырамыз.",
+                        "hero_desc2": "Қажетті тауарды іздеуден дайын партияны алуға дейін жеткізілімнің әр кезеңін алып жүреміз.",
+                        "hero_cta": "Есептеу сұрау",
+                        "hero_route_btn": "Біздің қызметтер",
+                        "stat_1_v": "5",
+                        "stat_1": "қызмет бағыты",
+                        "stat_2_v": "B2B",
+                        "stat_2": "корпоративтік тапсырыстар",
+                        "stat_3_v": "Қытай → ҚР",
+                        "stat_3": "тапсырмаға сай жеткізу",
+                        "stat_4_v": "Алматы +",
+                        "stat_4": "Қазақстан өңірлері",
+                        "card_badge": "B2B PROCESS",
+                        "card_title": "Бірыңғай жеткізу процесі",
+                        "card1_t": "Іздеу және сатып алу",
+                        "card1_d": "Өндірушілер, ұсыныстар, ынтымақтастық шарттары",
+                        "card2_t": "Брендтеу және сапаны бақылау",
+                        "card2_d": "Тапсырыс берушінің логотипі, үлгілер мен дайын өнімді тексеру",
+                        "card3_t": "Логистика және жеткізу",
+                        "card3_d": "Тасымалдауды ұйымдастыру және кедендік рәсімдеуді алып жүру",
+                        "card_f1": "Жеке іріктеу",
+                        "card_f2": "Алматы және ҚР өңірлері",
+                        "tabs_subtitle": "Біз не істейміз",
+                        "tabs_title": "Біздің қызметтер",
+                        "tabs_desc": "Бес негізгі бағыт — өндірушіні іздеуден дайын партияны жеткізуге дейін.",
+                        "s1_t": "Өндірушілер мен жеткізушілерді іздеу",
+                        "s1_d": "Тапсырыс беруші талаптарына сай Қытайдағы өндірушілер мен жеткізушілерді табамыз, өнімді іріктейміз, ұсыныстар сұраймыз және ынтымақтастық шарттарын келісеміз.",
+                        "s2_t": "Корпоративтік өнім және брендтеу",
+                        "s2_d": "Тапсырыс берушінің логотипімен корпоративтік мерч пен промо-өнім өндірісін ұйымдастырамыз: сөмкелер, рюкзактар, электроника, аксессуарлар және сыйлықтар.",
+                        "s3_t": "Сапаны бақылау",
+                        "s3_d": "Үлгілер мен дайын өнімді тексеруді, сипаттамаларды, жиынтықтылықты және сыртқы түрін тапсырысты жібермес бұрын келісуді ұйымдастырамыз.",
+                        "s4_t": "Сатып алу және тапсырыстарды алып жүру",
+                        "s4_d": "Жеткізушілермен өзара әрекеттесеміз, құнын, сипаттамаларын, өндіріс мерзімін және жеткізу шарттарын келісеміз. Тапсырысты барлық кезеңде алып жүреміз.",
+                        "s5_t": "Логистика және жеткізу",
+                        "s5_d": "Тауарды Қытайдан Қазақстанға жеткізуді, логистикалық серіктестермен өзара әрекеттесуді және кедендік рәсімдеуді алып жүруді ұйымдастырамыз.",
+                        "svc_btn": "Есептеу сұрау",
+                        "qc_1": "Жібермес бұрын өнім сапасын тексеруді ұйымдастырамыз және сапасыз тауар алу тәуекелін азайтуға көмектесеміз.",
+                        "qc_2": "Өндіріс кезеңінде және жібермес бұрын өнім сапасын бақылауды ұйымдастырамыз.",
+                        "adv_subtitle": "Неліктен PROVANTRA B2B",
+                        "adv_title": "PROVANTRA B2B-ді неліктен таңдайды",
+                        "a1_h": "Кешенді тәсіл",
+                        "a1_p": "Жеткізушілерді іздеуді, сатып алуды, брендтеуді, сапаны бақылауды және логистиканы бір процесте біріктіреміз.",
+                        "a2_h": "Жеке іріктеу",
+                        "a2_p": "Әр тапсырыс берушінің бюджетін, талаптары мен міндеттерін ескеріп өнім мен өндірушілерді іріктейміз.",
+                        "a3_h": "Тапсырысты алып жүру",
+                        "a3_p": "Жеткізудің барлық кезеңінде жеткізушілер мен серіктестердің өзара әрекеттесуін үйлестіреміз.",
+                        "a4_h": "Сапаны бақылау",
+                        "a4_p": "Үлгілер мен дайын өнімді келісілген талаптарға сай тексеруді ұйымдастырамыз.",
+                        "a5_h": "Бизнеске арналған шешімдер",
+                        "a5_p": "Корпоративтік тапсырыстармен, көтерме партиялармен және компаниялардың жеке сұраныстарымен жұмыс істейміз.",
+                        "a6_h": "Жеткізу географиясы",
+                        "a6_p": "Қытайдан Алматыға және Қазақстанның басқа өңірлеріне жеткізуді ұйымдастырамыз.",
+                        "route_subtitle": "Логистика",
+                        "route_title": "Қытайдан Қазақстанға жеткізуді ұйымдастыру",
+                        "route_desc": "Логистикалық процесті өнім түрін, партия көлемін, мерзімін және тапсырыс берушінің бюджетін ескеріп құрамыз.",
+                        "route_head": "Қытай → Қазақстан",
+                        "r1": "Жеткізу шарттарын келісу.",
+                        "r2": "Тапсырысты дайындау және жіберу.",
+                        "r3": "Халықаралық тасымалды ұйымдастыру.",
+                        "r4": "Кедендік рәсімдеуді алып жүру.",
+                        "r5": "Жүкті межелі жерге жеткізу.",
+                        "route_note": "Нақты тапсырыстың ерекшеліктеріне қарай серіктестермен бірге қолайлы логистика нұсқасын таңдаймыз.",
+                        "n1_h": "Логистикалық серіктестер",
+                        "n1_p": "Тауарды Қытайдан Қазақстанға логистикалық серіктестер арқылы жеткізуді ұйымдастырамыз.",
+                        "n2_h": "Кедендік рәсімдеу",
+                        "n2_p": "Кедендік рәсімдеу процесін алып жүреміз және бейінді мамандармен өзара әрекеттесуді ұйымдастырамыз.",
+                        "n3_h": "Жеткізу мәртебесі",
+                        "n3_p": "Жеткізу мәртебесі туралы ақпарат береміз және логистикалық процесс бойы тапсырысты алып жүреміз.",
+                        "n4_h": "Шығындар мен шарттар",
+                        "n4_p": "Логистикалық және кедендік шығындарды алдын ала бағалап, жеткізу шарттарын келісуге көмектесеміз.",
+                        "f_about": "Қытайдан Қазақстанға кешенді B2B-жеткізілімдер: өндірушілерді іздеу, сатып алу, брендтеу, сапаны бақылау және логистика.",
+                        "f_geo": "Бүкіл Қазақстан бойынша клиенттермен жұмыс істейміз. Алматыға және басқа өңірлерге жеткізуді ұйымдастырамыз.",
+                        "f_nav": "Навигация",
+                        "f_contacts": "Байланыс",
+                        "f_hours": "Жұмыс уақыты",
+                        "f_btn": "Есептеу сұрау",
+                        "f_privacy": "Құпиялылық саясаты"
             },
-            en: {
-                nav_route: "China-Almaty Route",
-                nav_services: "Services",
-                nav_advantages: "Advantages",
-                nav_contacts: "Contacts",
-                btn_rfq: "Request Quote",
-                hero_badge: "Turnkey B2B Supply in Almaty",
-                hero_title_1: "Direct supply of industrial equipment & goods from China",
-                hero_title_2: "straight to your warehouse in Almaty",
-                hero_desc: "PROVANTRA B2B manages the entire supply chain: factory audits in China, contracting, custom clearance, and door-to-door delivery in Almaty.",
-                hero_cta: "Calculate Shipping Cost to Almaty",
-                hero_route_btn: "View Route",
-                stat_1: "Clearance Guarantee",
-                stat_2: "Days Express Delivery",
-                stat_3: "Local Office & Warehouse",
-                stat_4: "Defect Risk (QC)",
-                live_step1_title: "Guangzhou / Yiwu (China)",
-                live_step1_desc: "Inspection, consolidation & container loading",
-                live_step2_title: "Khorgos Border (Customs РК)",
-                live_step2_desc: "Customs declaration & ST-1 certification",
-                live_step3_title: "Almaty Warehouse (Delivery)",
-                live_step3_desc: "Unloading, final check & doc handover",
-                route_subtitle: "Transparent Transit Artery",
-                route_title: "Shipping Route: China → Khorgos → Almaty",
-                route_desc: "Direct road and rail corridor with minimal transit times across the Kazakhstan border.",
-                tabs_subtitle: "B2B Services in Almaty",
-                tabs_title: "End-to-End Supply Management",
-                tabs_desc: "Select a service tab below to explore detailed workflows.",
-                tab_btn_1: "Factory Sourcing & Audit",
-                tab_btn_2: "Almaty Delivery",
-                tab_btn_3: "Customs Clearance & Trade",
-                tab1_title: "Direct Sourcing in China",
-                tab1_desc: "We audit factories in Guangzhou, Shenzhen, and Ningbo. Verifying credentials, ISO standards, and securing golden samples.",
-                tab2_title: "Road & Rail Freight China → Almaty",
-                tab2_desc: "Optimized LCL & FCL logistics targeting Almaty industrial districts and warehouses.",
-                tab3_title: "Customs Clearance & Compliance",
-                tab3_desc: "Full legal import. Goods delivered with VAT paid, GTD customs declaration, and full accounting paperwork.",
-                adv_subtitle: "Why PROVANTRA B2B",
-                adv_title: "Our Advantages in Almaty",
-                adv1_h: "Local Office in Almaty",
-                adv1_p: "No dealing with overseas agents across time zones. Our Almaty team is available for in-person meetings.",
-                adv2_h: "Financial Responsibility",
-                adv2_p: "Fixed prices locked in contract. We cover customs duty risks and transit contingencies.",
-                adv3_h: "100% Quality Inspection",
-                adv3_p: "Our inspectors in Guangzhou and Yiwu check every item before loading into trucks."
+            "en": {
+                        "nav_services": "Services",
+                        "nav_advantages": "Advantages",
+                        "nav_route": "Delivery",
+                        "nav_contacts": "Contacts",
+                        "btn_rfq": "Request Quote",
+                        "hero_badge": "Sourcing & Supply",
+                        "hero_title_1": "Comprehensive B2B supply from China",
+                        "hero_title_2": "for your business",
+                        "hero_desc": "We find manufacturers and organize purchasing, branding, quality control and delivery of corporate products to Kazakhstan.",
+                        "hero_desc2": "From finding the right product to receiving the finished batch — we support every stage of the supply.",
+                        "hero_cta": "Request a quote",
+                        "hero_route_btn": "Our services",
+                        "stat_1_v": "5",
+                        "stat_1": "service areas",
+                        "stat_2_v": "B2B",
+                        "stat_2": "corporate orders",
+                        "stat_3_v": "China → KZ",
+                        "stat_3": "supply tailored to your task",
+                        "stat_4_v": "Almaty +",
+                        "stat_4": "regions of Kazakhstan",
+                        "card_badge": "B2B PROCESS",
+                        "card_title": "One unified supply process",
+                        "card1_t": "Sourcing & purchasing",
+                        "card1_d": "Manufacturers, offers, terms of cooperation",
+                        "card2_t": "Branding & quality control",
+                        "card2_d": "Client logo, inspection of samples and finished goods",
+                        "card3_t": "Logistics & delivery",
+                        "card3_d": "Transport organization and customs clearance support",
+                        "card_f1": "Tailored selection",
+                        "card_f2": "Almaty & regions of KZ",
+                        "tabs_subtitle": "What we do",
+                        "tabs_title": "Our services",
+                        "tabs_desc": "Five core areas — from finding a manufacturer to delivering the finished batch.",
+                        "s1_t": "Manufacturer & supplier search",
+                        "s1_d": "We find manufacturers and suppliers in China according to the client's requirements, select products, request offers and agree on terms of cooperation.",
+                        "s2_t": "Corporate products & branding",
+                        "s2_d": "We organize production of corporate merch and promo products with the client's logo: bags, backpacks, electronics, accessories and gifts.",
+                        "s3_t": "Quality control",
+                        "s3_d": "We organize inspection of samples and finished goods, and agree on specifications, completeness and appearance before the order is shipped.",
+                        "s4_t": "Purchasing & order support",
+                        "s4_d": "We work with suppliers, agree on cost, specifications, production lead times and delivery terms. We support the order at every stage.",
+                        "s5_t": "Logistics & delivery",
+                        "s5_d": "We organize delivery of goods from China to Kazakhstan, coordination with logistics partners and support of customs clearance.",
+                        "svc_btn": "Request a quote",
+                        "qc_1": "We organize product quality checks before shipment and help minimize the risk of receiving substandard goods.",
+                        "qc_2": "We organize product quality control during production and before shipment.",
+                        "adv_subtitle": "Why PROVANTRA B2B",
+                        "adv_title": "Why clients choose PROVANTRA B2B",
+                        "a1_h": "Comprehensive approach",
+                        "a1_p": "We combine supplier search, purchasing, branding, quality control and logistics in a single process.",
+                        "a2_h": "Tailored selection",
+                        "a2_p": "We select products and manufacturers based on each client's budget, requirements and goals.",
+                        "a3_h": "Order support",
+                        "a3_p": "We coordinate work with suppliers and partners at every stage of the supply.",
+                        "a4_h": "Quality control",
+                        "a4_p": "We organize inspection of samples and finished goods in line with agreed requirements.",
+                        "a5_h": "Business solutions",
+                        "a5_p": "We work with corporate orders, wholesale batches and individual company requests.",
+                        "a6_h": "Delivery geography",
+                        "a6_p": "We organize supply from China to Almaty and other regions of Kazakhstan.",
+                        "route_subtitle": "Logistics",
+                        "route_title": "Organizing supply from China to Kazakhstan",
+                        "route_desc": "We build the logistics process around the product type, batch size, timing and the client's budget.",
+                        "route_head": "China → Kazakhstan",
+                        "r1": "Agreeing on delivery terms.",
+                        "r2": "Preparing and dispatching the order.",
+                        "r3": "Organizing international transport.",
+                        "r4": "Supporting customs clearance.",
+                        "r5": "Delivering the cargo to its destination.",
+                        "route_note": "We select a suitable logistics option together with partners, based on the specifics of each order.",
+                        "n1_h": "Logistics partners",
+                        "n1_p": "We organize delivery of goods from China to Kazakhstan through logistics partners.",
+                        "n2_h": "Customs clearance",
+                        "n2_p": "We support the customs clearance process and coordinate work with qualified specialists.",
+                        "n3_h": "Delivery status",
+                        "n3_p": "We provide delivery status updates and support the order throughout the logistics process.",
+                        "n4_h": "Costs & terms",
+                        "n4_p": "We help estimate logistics and customs costs in advance and agree on delivery terms.",
+                        "f_about": "Comprehensive B2B supply from China to Kazakhstan: manufacturer search, purchasing, branding, quality control and logistics.",
+                        "f_geo": "We work with clients across Kazakhstan. We organize supply with delivery to Almaty and other regions.",
+                        "f_nav": "Navigation",
+                        "f_contacts": "Contacts",
+                        "f_hours": "Working hours",
+                        "f_btn": "Request a quote",
+                        "f_privacy": "Privacy Policy"
             }
-        };
+};
 
         function setLanguage(lang) {
             // Highlight active button

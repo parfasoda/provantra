@@ -602,14 +602,14 @@
             <div class="glass-card rounded-2xl sm:rounded-3xl p-3 sm:p-6 lg:p-10 border border-gold-500/20 relative reveal-element">
 
                 <!-- ===== ПК (от 1024px): горизонтальная карта ===== -->
-                <div class="hidden lg:block relative w-full aspect-[9/4] bg-dark-950/90 rounded-2xl overflow-hidden border border-white/5">
+                <div class="hidden lg:block relative w-full max-w-[1100px] mx-auto aspect-[9/5] bg-dark-950/90 rounded-2xl overflow-hidden border border-white/5">
 
                     <!-- Grid pattern background -->
                     <div class="absolute inset-0 bg-[radial-gradient(#cfa76e_1px,transparent_1px)] [background-size:24px_24px] opacity-15"></div>
 
-                    <svg viewBox="0 0 900 400" class="w-full h-full absolute inset-0 text-gold-500" role="img" aria-label="Маршрут: Китай, КПП Хоргос, Алматы">
+                    <svg viewBox="0 0 900 500" class="w-full h-full absolute inset-0 text-gold-500" role="img" aria-label="Маршрут: Китай, КПП Хоргос, Алматы">
                         <defs>
-                            <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <linearGradient id="routeGradient" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="750" y2="0">
                                 <stop offset="0%" stop-color="#dfba82" />
                                 <stop offset="50%" stop-color="#cfa76e" />
                                 <stop offset="100%" stop-color="#10b981" />
@@ -617,54 +617,57 @@
                         </defs>
 
                         <!-- Main Static Line -->
-                        <path d="M 150 280 Q 400 120 750 180" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M 150 307 Q 400 147 750 207" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="6" stroke-linecap="round"/>
 
                         <!-- Animated Dotted Delivery Line -->
-                        <path d="M 150 280 Q 400 120 750 180" fill="none" stroke="url(#routeGradient)" stroke-width="5" class="animated-route-line" stroke-linecap="round"/>
+                        <path d="M 150 307 Q 400 147 750 207" fill="none" stroke="url(#routeGradient)" stroke-width="5" class="animated-route-line" stroke-linecap="round"/>
 
-                        <!-- Point 1: China (Guangzhou / Yiwu) -->
-                        <g transform="translate(150, 280)">
+                        <!-- Point 1: China -->
+                        <g transform="translate(150, 307)">
                             <circle r="14" fill="#14161b" stroke="#dfba82" stroke-width="4" />
                             <circle r="5" fill="#dfba82" />
                         </g>
 
-                        <!-- Point 2: Khorgos Border (Customs) — точка лежит ровно на кривой: t = 0.5414 -> (450; 171.24) -->
-                        <g transform="translate(450, 171.24)">
+                        <!-- Point 2: Khorgos — точка лежит ровно на кривой (t = 0.5414) -->
+                        <g transform="translate(450, 198.24)">
                             <circle r="14" fill="#14161b" stroke="#cfa76e" stroke-width="4" />
                             <circle r="5" fill="#cfa76e" />
                         </g>
 
-                        <!-- Point 3: Almaty Destination -->
-                        <g transform="translate(750, 180)">
+                        <!-- Point 3: Almaty -->
+                        <g transform="translate(750, 207)">
                             <circle r="18" fill="#14161b" stroke="#10b981" stroke-width="4" />
                             <circle r="7" fill="#10b981" />
                         </g>
 
-                        <!-- Moving Pulse (груз едет Китай -> Алматы по той же линии, поверх точек) -->
+                        <!-- Moving Pulse -->
                         <g>
                             <circle r="7" fill="#cfa76e" opacity="0.7">
                                 <animate attributeName="r" values="7;20" dur="1.5s" repeatCount="indefinite" />
                                 <animate attributeName="opacity" values="0.7;0" dur="1.5s" repeatCount="indefinite" />
                             </circle>
                             <circle r="7" fill="#FFFFFF" />
-                            <animateMotion path="M 150 280 Q 400 120 750 180" dur="6s" repeatCount="indefinite" />
+                            <animateMotion path="M 150 307 Q 400 147 750 207" dur="6s" repeatCount="indefinite" />
                         </g>
                     </svg>
 
-                    <!-- Подписи (позиции привязаны к точкам в процентах от размера карты) -->
-                    <div class="absolute left-[16.67%] top-[70%] mt-8 -translate-x-1/2 glass-card p-4 rounded-xl border border-gold-500/30 max-w-[200px] text-center">
+                    <!-- Подписи: позиции привязаны к точкам (в процентах от размера карты) -->
+                    <!-- Китай: точка (150;307) -> 16.67% / 61.4% -->
+                    <div class="absolute left-[16.67%] top-[61.4%] mt-8 -translate-x-1/2 glass-card p-4 rounded-xl border border-gold-500/30 w-[200px] text-center">
                         <span data-i18n="map_p1_a" class="text-[10px] font-bold text-gold-400 tracking-widest uppercase">ОТПРАВКА</span>
                         <h4 data-i18n="map_p1_b" class="font-bold text-white text-base">Производители в Китае</h4>
                         <p data-i18n="map_p1_c" class="text-[11px] text-zinc-400 mt-0.5">Поиск, закупка, отправка</p>
                     </div>
 
-                    <div class="absolute left-1/2 top-[42.81%] -mt-9 -translate-x-1/2 -translate-y-full glass-card p-4 rounded-xl border border-gold-500/40 max-w-[220px] text-center">
+                    <!-- Хоргос: точка (450;198.24) -> 50% / 39.65% -->
+                    <div class="absolute left-1/2 top-[39.65%] -mt-9 -translate-x-1/2 -translate-y-full glass-card p-4 rounded-xl border border-gold-500/40 w-[220px] text-center">
                         <span data-i18n="map_p2_a" class="text-[10px] font-bold text-gold-400 tracking-widest uppercase">ТАМОЖНЯ РК</span>
                         <h4 data-i18n="map_p2_b" class="font-bold text-white text-base">КПП Хоргос</h4>
                         <p data-i18n="map_p2_c" class="text-[11px] text-zinc-400 mt-0.5">Таможенное оформление</p>
                     </div>
 
-                    <div class="absolute left-[83.33%] top-[45%] mt-10 -translate-x-1/2 glass-card p-4 rounded-xl border border-emerald-500/40 max-w-[220px] text-center">
+                    <!-- Алматы: точка (750;207) -> 83.33% / 41.4% -->
+                    <div class="absolute left-[83.33%] top-[41.4%] mt-10 -translate-x-1/2 glass-card p-4 rounded-xl border border-emerald-500/40 w-[220px] text-center">
                         <span data-i18n="map_p3_a" class="text-[10px] font-bold text-emerald-400 tracking-widest uppercase">НАЗНАЧЕНИЕ</span>
                         <h4 data-i18n="map_p3_b" class="font-bold text-white text-base">Алматы</h4>
                         <p data-i18n="map_p3_c" class="text-[11px] text-zinc-400 mt-0.5">Доставка в Алматы и регионы</p>
@@ -933,17 +936,17 @@
             <form id="rfq-form" onsubmit="handleRfqSubmit(event)" class="space-y-4">
                 <div>
                     <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Компания / Ваше имя *</label>
-                    <input type="text" autocomplete="organization" required placeholder="ТОО 'Алматы Трейд' / Арман" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
+                    <input type="text" id="rfq-name" autocomplete="organization" required placeholder="ТОО 'Алматы Трейд' / Арман" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Телефон в РК *</label>
-                        <input type="tel" inputmode="tel" autocomplete="tel" required placeholder="+7 (707) 000-00-00" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
+                        <input type="tel" id="rfq-phone" inputmode="tel" autocomplete="tel" required placeholder="+7 (707) 000-00-00" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
                     </div>
                     <div>
                         <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Email *</label>
-                        <input type="email" inputmode="email" autocomplete="email" required placeholder="info@company.kz" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
+                        <input type="email" id="rfq-email" inputmode="email" autocomplete="email" required placeholder="info@company.kz" class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500">
                     </div>
                 </div>
 
@@ -954,7 +957,7 @@
 
                 <div>
                     <label class="block text-[11px] font-bold uppercase text-zinc-400 mb-1">Комментарий / Объём партии</label>
-                    <textarea rows="3" placeholder="Укажите объём партии, требования, сроки..." class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
+                    <textarea id="rfq-comment" rows="3" placeholder="Укажите объём партии, требования, сроки..." class="w-full bg-dark-950 border border-white/10 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
                 </div>
 
                 <label class="flex items-start gap-3 text-xs leading-relaxed text-zinc-400 cursor-pointer select-none">
@@ -972,7 +975,7 @@
                     <i data-lucide="check-circle-2" class="w-6 h-6"></i>
                 </div>
                 <h4 class="text-xl font-bold text-white">Заявка принята!</h4>
-                <p class="text-xs text-zinc-400">Менеджер PROVANTRA свяжется с вами в ближайшее время.</p>
+                <p class="text-xs text-zinc-400">Откроется WhatsApp — нажмите «Отправить», чтобы заявка дошла до менеджера PROVANTRA.</p>
             </div>
         </div>
     </div>
@@ -1543,12 +1546,35 @@
             }, 350);
         }
 
+        const RFQ_WHATSAPP_NUMBER = '77074256100'; // +7 707 425 6100
+
         function handleRfqSubmit(e) {
             e.preventDefault();
+            const val = (id) => {
+                const el = document.getElementById(id);
+                return el ? el.value.trim() : '';
+            };
+            const lines = [
+                'Новая заявка с сайта PROVANTRA B2B',
+                '',
+                'Компания / имя: ' + val('rfq-name'),
+                'Телефон: ' + val('rfq-phone'),
+                'Email: ' + val('rfq-email'),
+                'Продукция: ' + (val('rfq-service-field') || '—'),
+                'Комментарий / объём партии: ' + (val('rfq-comment') || '—')
+            ];
+            const url = 'https://wa.me/' + RFQ_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+
+            // Открываем WhatsApp сразу в обработчике клика, чтобы браузер не заблокировал окно
+            const win = window.open(url, '_blank', 'noopener');
+            if (!win) window.location.href = url;
+
             document.getElementById('rfq-form').classList.add('hidden');
             document.getElementById('rfq-success').classList.remove('hidden');
             setTimeout(() => {
                 closeRfqModal();
+                const f = document.getElementById('rfq-form');
+                if (f) f.reset();
             }, 3000);
         }
     

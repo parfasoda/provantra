@@ -123,6 +123,28 @@
             opacity: 1;
         }
 
+        /* Окно «Заявка принята!» и состояние отправки */
+        #rfq-success-modal {
+            opacity: 0; visibility: hidden;
+            transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+        }
+        #rfq-success-modal.open { opacity: 1; visibility: visible; }
+        #rfq-success-card {
+            transform: translateY(30px) scale(0.92); opacity: 0;
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease-out;
+        }
+        #rfq-success-modal.open #rfq-success-card { transform: translateY(0) scale(1); opacity: 1; }
+        #rfq-success-modal.open .rfq-check-ring { animation: rfqPop 0.6s 0.15s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+        @keyframes rfqPop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .rfq-spinner {
+            width: 16px; height: 16px; border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.25); border-top-color: #000;
+            animation: rfqSpin 0.7s linear infinite; flex-shrink: 0;
+        }
+        @keyframes rfqSpin { to { transform: rotate(360deg); } }
+        #rfq-submit:disabled { opacity: 0.75; cursor: not-allowed; box-shadow: none; }
+        #rfq-submit.is-loading { pointer-events: none; }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -965,8 +987,10 @@
                     <span>Я даю согласие на сбор и обработку моих персональных данных и ознакомлен(а) с <a href="#privacy" onclick="openPrivacyModal(event)" class="text-gold-400 underline underline-offset-2 hover:text-gold-300">Политикой обработки персональных данных</a> *</span>
                 </label>
 
-                <button type="submit" class="w-full py-3.5 text-xs font-extrabold tracking-wider uppercase text-black gold-gradient-bg rounded-xl hover:shadow-[0_0_20px_rgba(207,167,110,0.4)] transition-all mt-2">
-                    Получить коммерческое предложение
+                <div id="rfq-error" role="alert" aria-live="polite" class="hidden text-xs leading-relaxed text-red-300 bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3"></div>
+
+                <button type="submit" id="rfq-submit" class="w-full py-3.5 text-xs font-extrabold tracking-wider uppercase text-black gold-gradient-bg rounded-xl hover:shadow-[0_0_20px_rgba(207,167,110,0.4)] transition-all mt-2 flex items-center justify-center gap-2">
+                    <span id="rfq-submit-label">Получить коммерческое предложение</span>
                 </button>
             </form>
 
@@ -977,6 +1001,20 @@
                 <h4 class="text-xl font-bold text-white">Заявка принята!</h4>
                 <p class="text-xs text-zinc-400">Откроется WhatsApp — нажмите «Отправить», чтобы заявка дошла до менеджера PROVANTRA.</p>
             </div>
+        </div>
+    </div>
+
+    <!-- RFQ SUCCESS MODAL (Заявка принята!) -->
+    <div id="rfq-success-modal" role="dialog" aria-modal="true" aria-labelledby="rfq-success-title" aria-hidden="true" class="fixed inset-0 z-[70] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div id="rfq-success-card" class="glass-card rounded-2xl max-w-md w-full p-6 sm:p-10 relative border border-gold-500/40 gold-glow text-center">
+            <span class="text-[10px] font-bold tracking-[0.3em] text-gold-500 uppercase">PROVANTRA</span>
+            <div class="rfq-check-ring w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto my-5 sm:my-6">
+                <i data-lucide="check" class="w-8 h-8 sm:w-10 sm:h-10"></i>
+            </div>
+            <h3 id="rfq-success-title" class="text-2xl sm:text-3xl font-black text-white">Заявка принята!</h3>
+            <p class="text-sm font-semibold text-gold-400 mt-3">Спасибо за обращение в PROVANTRA.</p>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-3 leading-relaxed">Мы получили вашу заявку и свяжемся с вами в ближайшее время для уточнения деталей.</p>
+            <button type="button" id="rfq-success-btn" onclick="closeRfqSuccess()" class="w-full mt-7 py-3.5 text-xs font-extrabold tracking-wider uppercase text-black gold-gradient-bg rounded-xl hover:shadow-[0_0_20px_rgba(207,167,110,0.4)] transition-all active:scale-95">Отлично</button>
         </div>
     </div>
 
@@ -1579,44 +1617,137 @@
                 modal.classList.add('invisible');
                 document.getElementById('rfq-form').classList.remove('hidden');
                 document.getElementById('rfq-success').classList.add('hidden');
+                const eb = document.getElementById('rfq-error'); if (eb) eb.classList.add('hidden');
                 // согласие даётся заново при каждой отправке данных
                 const consent = document.getElementById('rfq-consent');
                 if (consent) consent.checked = false;
             }, 350);
         }
 
-        const RFQ_WHATSAPP_NUMBER = '77074256100'; // +7 707 425 6100
+        const RFQ_API_URL = 'https://provantra.parfenovd441.workers.dev';
+        const RFQ_ERROR_TEXT = 'Не удалось отправить заявку. Пожалуйста, попробуйте ещё раз или свяжитесь с нами через WhatsApp';
+        let rfqSending = false;
 
-        function handleRfqSubmit(e) {
+        function setRfqLoading(on) {
+            const btn = document.getElementById('rfq-submit');
+            const label = document.getElementById('rfq-submit-label');
+            if (!btn || !label) return;
+            if (on) {
+                if (!btn.dataset.label) btn.dataset.label = label.textContent;
+                btn.disabled = true;
+                btn.classList.add('is-loading');
+                btn.setAttribute('aria-busy', 'true');
+                label.textContent = 'Отправляем заявку...';
+                btn.insertAdjacentHTML('afterbegin', '<span class="rfq-spinner" id="rfq-spinner"></span>');
+            } else {
+                btn.disabled = false;
+                btn.classList.remove('is-loading');
+                btn.removeAttribute('aria-busy');
+                label.textContent = btn.dataset.label || label.textContent;
+                const sp = document.getElementById('rfq-spinner');
+                if (sp) sp.remove();
+            }
+        }
+
+        function showRfqError(msg) {
+            const box = document.getElementById('rfq-error');
+            if (!box) return;
+            box.textContent = msg;
+            box.classList.remove('hidden');
+        }
+
+        async function handleRfqSubmit(e) {
             e.preventDefault();
+            if (rfqSending) return; // защита от повторной отправки
             const val = (id) => {
                 const el = document.getElementById(id);
                 return el ? el.value.trim() : '';
             };
-            const lines = [
-                'Новая заявка с сайта PROVANTRA B2B',
-                '',
-                'Компания / имя: ' + val('rfq-name'),
-                'Телефон: ' + val('rfq-phone'),
-                'Email: ' + val('rfq-email'),
-                'Продукция: ' + (val('rfq-service-field') || '—'),
-                'Комментарий / объём партии: ' + (val('rfq-comment') || '—')
-            ];
-            const url = 'https://wa.me/' + RFQ_WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
 
-            // Открываем WhatsApp сразу в обработчике клика, чтобы браузер не заблокировал окно
-            const win = window.open(url, '_blank', 'noopener');
-            if (!win) window.location.href = url;
+            // Поле формы «Компания / Ваше имя» → company и name
+            const who = val('rfq-name');
+            let company = who, contact = who;
+            if (who.indexOf('/') !== -1) {
+                const parts = who.split('/');
+                company = parts[0].trim() || who;
+                contact = parts.slice(1).join('/').trim() || who;
+            }
 
-            document.getElementById('rfq-form').classList.add('hidden');
-            document.getElementById('rfq-success').classList.remove('hidden');
-            setTimeout(() => {
-                closeRfqModal();
+            const payload = {
+                company: company,
+                name: contact,
+                phone: val('rfq-phone'),
+                email: val('rfq-email'),
+                product: val('rfq-service-field'),
+                quantity: '', // отдельного поля в форме нет — объём клиент указывает в комментарии
+                comment: val('rfq-comment')
+            };
+
+            const errBox = document.getElementById('rfq-error');
+            if (errBox) errBox.classList.add('hidden');
+            rfqSending = true;
+            setRfqLoading(true);
+
+            let ok = false;
+            try {
+                const ctrl = new AbortController();
+                const timer = setTimeout(() => ctrl.abort(), 20000);
+                const res = await fetch(RFQ_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    signal: ctrl.signal
+                });
+                clearTimeout(timer);
+                let data = null;
+                try { data = await res.json(); } catch (err) {}
+                ok = !!(res.ok && data && data.success === true);
+                if (!ok) console.error('[RFQ] Ответ Worker:', res.status, data);
+            } catch (err) {
+                console.error('[RFQ] Ошибка запроса (часто это CORS или нет сети):', err);
+                ok = false;
+            }
+
+            rfqSending = false;
+            setRfqLoading(false);
+
+            if (ok) {
                 const f = document.getElementById('rfq-form');
                 if (f) f.reset();
-            }, 3000);
+                closeRfqModal();
+                openRfqSuccess();
+            } else {
+                showRfqError(RFQ_ERROR_TEXT); // данные в форме сохраняются
+            }
         }
-    
+
+        function openRfqSuccess() {
+            const m = document.getElementById('rfq-success-modal');
+            if (!m) return;
+            m.classList.add('open');
+            m.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            if (window.lucide) lucide.createIcons();
+            setTimeout(() => { const b = document.getElementById('rfq-success-btn'); if (b) b.focus({ preventScroll: true }); }, 100);
+        }
+
+        function closeRfqSuccess() {
+            const m = document.getElementById('rfq-success-modal');
+            if (!m) return;
+            m.classList.remove('open');
+            m.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        (function () {
+            const m = document.getElementById('rfq-success-modal');
+            if (!m) return;
+            m.addEventListener('click', (e) => { if (e.target === m) closeRfqSuccess(); });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && m.classList.contains('open')) closeRfqSuccess();
+            });
+        })();
+
         // Закрытие модального окна: клик по тёмному фону и клавиша Esc
         (function () {
             const modal = document.getElementById('rfq-modal');

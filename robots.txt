@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://provantrab2b.kz/sitemap.xml
